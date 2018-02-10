@@ -2,7 +2,9 @@
 
 Record install information for your npm packages in Google Analytics.
 
-install-stats helps you find out:
+Inspired by install analytics provided by [Homebrew](https://brew.sh/analytics/), [PyPI](https://mail.python.org/pipermail/distutils-sig/2016-May/028986.html) and [Cocoapods](http://blog.cocoapods.org/Stats/).
+
+`install-stats` helps you find out:
 
 - installed versions of your package
 - which versions of node.js are used to install your packages
