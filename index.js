@@ -1,5 +1,6 @@
 // install-stats v1.0.6
 // Copyright (C) 2018 Andrew Nesbitt
+// https://github.com/andrew/install-stats
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -13,8 +14,6 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-var https   = require('https');
 
 try {
   var user_agent = process.env.npm_config_user_agent.split(/[\s\/]+/)
@@ -43,5 +42,5 @@ try {
     url += "&" + key + "=" + encodeURIComponent(params[key]);
   }
 
-  https.get(url);
+  require('https').get(url);
 } catch (e) {}
