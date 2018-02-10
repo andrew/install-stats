@@ -44,7 +44,7 @@ Then add the postinstall script to the package.json file, including your Google 
 
 ```json
 "scripts": {
-  "postinstall": "TID=UA-XXXXXX-XX script/install-stats.js"
+  "postinstall": "TID=UA-XXXXXX-XX script/install-stats.js || exit 0"
 },
 ```
 
