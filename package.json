@@ -1,8 +1,13 @@
 {
   "name": "install-stats",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Record install stats for npm modules",
-  "keywords": ["analytics", "tracking", "installs", "stats"],
+  "keywords": [
+    "analytics",
+    "tracking",
+    "installs",
+    "stats"
+  ],
   "scripts": {
     "install": "TID=UA-265870-43 ./bin/install-stats"
   },
