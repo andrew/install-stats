@@ -30,7 +30,7 @@ Then add the install script to the package.json file, including your Google Anal
 
 ```json
 "scripts": {
-  "install": "TID=UA-XXXXXX-XX node_modules/.bin/install-stats"
+  "postinstall": "TID=UA-XXXXXX-XX node_modules/.bin/install-stats"
 },
 ```
 

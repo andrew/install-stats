@@ -9,7 +9,7 @@
     "stats"
   ],
   "scripts": {
-    "install": "TID=UA-265870-43 ./bin/install-stats"
+    "postinstall": "TID=UA-265870-43 ./bin/install-stats"
   },
   "bin": {
     "install-stats": "bin/install-stats"
