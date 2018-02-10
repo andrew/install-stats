@@ -2,11 +2,16 @@
   "name": "install-stats",
   "version": "1.0.3",
   "description": "Record install stats for npm modules",
+  "keywords": ["analytics", "tracking", "installs", "stats"],
   "scripts": {
     "install": "TID=UA-265870-43 ./bin/install-stats"
   },
   "bin": {
     "install-stats": "bin/install-stats"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrew/install-stats"
   },
   "author": "Andrew Nesbitt",
   "license": "LGPL-3.0"
