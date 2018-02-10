@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+var https   = require('https');
+var pkgjson = require('../package.json');
+
+try {
+  var user_agent = process.env.npm_config_user_agent.split(/[\s\/]+/)
+
+  var params = {
+    v:   1,
+    tid: process.env.TID,
+    aip: 1,
+    t:   'event',
+    ec:  'install',
+    ea:  process.env.npm_package_name,
+    el:  process.env.npm_package_version,
+    ua:  pkgjson.name + '-' + pkgjson.version,
+    z:   Math.floor(Math.random()*20000000000),
+    cid: new Buffer(process.env.npm_config_tmp).toString('base64'),
+    cd1: 'node version',
+    cm1: user_agent[3],
+    cd2: 'npm version',
+    cm2: user_agent[1],
+    cd3: 'operating system',
+    cm3: user_agent[4],
+    cd4: 'architecture',
+    cm4: user_agent[5]
+  };
+
+  var url = "https://www.google-analytics.com/collect?";
+  for (var key in params) {
+    url += "&" + key + "=" + encodeURIComponent(params[key]);
+  }
+
+  https.get(url);
+} catch (e) {}
