@@ -30,7 +30,7 @@ try {
     an:  'install-stats',
     av:  '1.0.6',
     z:   Math.floor(Math.random()*20000000000),
-    cid: new Buffer(process.env.npm_config_tmp).toString('base64'),
+    cid: require('crypto').createHash('md5').update(process.env.npm_config_tmp).digest("hex"),
     cd1: user_agent[3], // node version
     cd2: user_agent[1], // npm version
     cd3: user_agent[4], // operating system
