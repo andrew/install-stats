@@ -23,19 +23,26 @@ First, if you haven't already got one, setup a Google Analytics account: https:/
 
 Create a new property and copy the tracking id, it should look like: `UA-XXXXXX-XX`
 
-Add `install-stats` as a dependency of your module's package.json:
+Next you need to create four custom dimensions within the google analytics property settings, the order is important:
 
-```json
-"dependencies": {
-  "install-stats": "1.x"
-},
-```
+| Index | Name             | Scope |
+|-------|------------------|-------|
+| 1     | node version     | Hit   |
+| 2     | npm version      | Hit   |
+| 3     | operating system | Hit   |
+| 4     | architecture     | Hit   |
 
-Then add the install script to the package.json file, including your Google Analytics property tracking id:
+More detailed instructions here: https://support.google.com/analytics/answer/2709829
+
+_note: Due to a [bug](https://github.com/npm/npm/issues/17316) in npm@5 this can't be reliably loaded as a dependency so the script needs to be included within your module for now._
+
+Copy and paste the contents of `index.js` into `scripts/install-stats.js` within your module.
+
+Then add the postinstall script to the package.json file, including your Google Analytics property tracking id:
 
 ```json
 "scripts": {
-  "postinstall": "TID=UA-XXXXXX-XX node_modules/.bin/install-stats"
+  "postinstall": "TID=UA-XXXXXX-XX script/install-stats.js"
 },
 ```
 
