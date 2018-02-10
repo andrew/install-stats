@@ -8,6 +8,7 @@
     "installs",
     "stats"
   ],
+  "main": "index.js",
   "scripts": {
     "postinstall": "TID=UA-265870-43 ./bin/install-stats"
   },
