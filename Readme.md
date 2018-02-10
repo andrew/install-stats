@@ -36,7 +36,7 @@ More detailed instructions here: https://support.google.com/analytics/answer/270
 
 _note: Due to a [bug](https://github.com/npm/npm/issues/17316) in npm@5 this can't be reliably loaded as a dependency so the script needs to be included within your module for now._
 
-Copy and paste the contents of `index.js` into `scripts/install-stats.js` within your module.
+Copy and paste the contents of [`index.js`](index.js) into `scripts/install-stats.js` within your module.
 
 Then add the postinstall script to the package.json file, including your Google Analytics property tracking id:
 
