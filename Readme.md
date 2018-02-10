@@ -40,6 +40,8 @@ Then publish a new version to npm and install data will begin to show up in Goog
 
 This package does not provide any interface for exporting data directly but Google Analytics has an advanced API for generate reports that you can use to export data: https://developers.google.com/analytics/devguides/reporting/core/v4/quickstart/web-js
 
+Installs are stored in Google Analytics as events (rather than traditional pageviews) with custom dimensions for each attribute of the system it was install in.
+
 # Disabling
 
 To disable stats tracking with the `--ignore-scripts` flag in npm, for a one time install:
