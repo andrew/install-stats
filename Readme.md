@@ -12,6 +12,11 @@ install-stats helps you find out:
 - other names your package may be published under
 - plus most of the features of [Google Analytics](https://analytics.google.com)
 
+# Notes
+
+- IP addresses are anonymized: https://support.google.com/analytics/answer/2763052?hl=en
+- Doesn't currently track installs with yarn
+
 # Setup
 
 First, if you haven't already got one, setup a Google Analytics account: https://analytics.google.com
